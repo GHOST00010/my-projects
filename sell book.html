@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Books - SchoolBooks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 1em 0;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            padding: 2em;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.5em 1em;
+            margin: 1em;
+            color: white;
+            background-color: red;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #007bff;
+            color: white;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 2em auto;
+            padding: 1em;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+        .form-container h2 {
+            margin-top: 0;
+        }
+        .form-container label {
+            display: block;
+            margin: 0.5em 0 0.2em;
+        }
+        .form-container input, 
+        .form-container textarea {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-container button {
+            padding: 0.5em 1em;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sell Your Books on SchoolBooks.com</h1>
+    </header>
+
+    <div class="container">
+        <section class="form-container">
+            <h2>Sell Your Books</h2>
+            <form action="/submit-book" method="post">
+                <label for="book-title">Book Title:</label>
+                <input type="text" id="book-title" name="book-name" required>
+
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" step="0.01" placeholder="Half of the printed price on the book" required>
+
+                <label for="condition">Condition:</label>
+                <textarea id="condition" name="condition" rows="4" placeholder="Describe the condition of the book" required></textarea>
+
+                <button type="submit">Submit Book</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SchoolBooks.com</p>
+    </footer>
+</body>
+</html>
